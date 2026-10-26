@@ -1,81 +1,68 @@
-# Composizione e Nuovi Linguaggi — Conservatorio "G. Nicolini" di Piacenza
+# Dipartimento di Composizione e Nuovi Linguaggi
 
-Repository del Dipartimento di Composizione e Nuovi Linguaggi del Conservatorio di Musica "Giuseppe Nicolini" di Piacenza.
+**Conservatorio di Musica "Giuseppe Nicolini" di Piacenza**
 
 ## Finalità
 
-Il repository GitHub del dipartimento è destinato alla condivisione e allo sviluppo collaborativo di **codice, patch, progetti computazionali e relativa documentazione tecnica**.
+Il presente repository è destinato alla condivisione e allo sviluppo collaborativo di codice, patch, progetti computazionali e relativa documentazione tecnica prodotti nell'ambito delle attività didattiche e di ricerca del Dipartimento.
 
-I materiali didattici di altra natura, quali presentazioni, dispense e contenuti audiovisivi, sono distribuiti attraverso **Discord** o altre piattaforme istituzionali, fatta eccezione per le risorse direttamente necessarie al funzionamento dei progetti pubblicati (ad esempio campioni audio, impulse response, immagini o file di dati richiamati dal codice).
+I materiali didattici di altra natura, quali presentazioni, dispense e contenuti audiovisivi, sono distribuiti attraverso Discord o altre piattaforme istituzionali, fatta eccezione per le risorse direttamente necessarie al funzionamento dei progetti pubblicati.
 
-## Struttura
+## Linee guida per i contributi
 
-```
-.
-├── 1-triennio/                  Corsi del Diploma accademico di primo livello
-│   ├── campionamento-sintesi/
-│   ├── informatica-musicale/
-│   ├── multimedia/
-│   └── sistemi-linguaggi/
-├── 2-biennio/                   Corsi del Diploma accademico di secondo livello
-│   ├── ambienti-esecutivi/
-│   ├── sistemi-internet/
-│   └── sistemi-linguaggi/
-└── 3-workshop/                  Seminari, masterclass e workshop
-```
+Le presenti linee guida sono rivolte ai docenti del Dipartimento che partecipano al repository.
 
-Le cartelle dei corsi attualmente presenti sono quelle dei corsi del Prof. A. Anatrini. Ogni docente che desideri contribuire crea la cartella del proprio corso all'interno di `1-triennio/`, `2-biennio/` o `3-workshop/`, seguendo le convenzioni sui nomi indicate più sotto e corredandola di un `README.md` con la descrizione del corso, il nome del docente e l'indice dei progetti presenti. Se un corso con lo stesso nome è già presente, aggiungere al nome della cartella il cognome del docente (es. `sistemi-linguaggi-rossi/`).
+### Contenuti ammessi
 
-## Regole per i contributi (docenti)
-
-### Cosa pubblicare
-
-- Codice sorgente, patch (Max/MSP, Pure Data, SuperCollider, ecc.), script e progetti computazionali.
+- Codice sorgente, script e progetti computazionali.
+- Patch per ambienti di programmazione visuale e testuale (Max, Pure Data, SuperCollider e simili).
 - Workspace e patch di OpenMusic.
-- File di progetto delle DAW (Reaper, Ableton Live, Logic Pro, ecc.), quando costituiscono parte integrante di un progetto o ne documentano la realizzazione. In questo caso è opportuno indicare nel `README.md` la versione del software e gli eventuali plugin necessari, e includere solo i file audio effettivamente utilizzati dal progetto.
-- Documentazione tecnica: istruzioni di installazione e d'uso, dipendenze, note di implementazione.
-- Risorse indispensabili al funzionamento dei progetti (audio, immagini, dati), purché di dimensioni contenute.
+- File di progetto di Digital Audio Workstation (Reaper, Ableton Live, Logic Pro e simili), qualora costituiscano parte integrante di un progetto o ne documentino la realizzazione. In tal caso il `README.md` del progetto deve specificare la versione del software e i plugin richiesti; i file audio inclusi devono limitarsi a quelli effettivamente utilizzati.
+- Documentazione tecnica relativa ai progetti pubblicati.
+- Risorse indispensabili al funzionamento dei progetti (campioni audio, risposte all'impulso, immagini, dati), purché di dimensioni contenute.
 
-### Cosa non pubblicare
+### Contenuti esclusi
 
-- Presentazioni, dispense, registrazioni delle lezioni e altri materiali didattici non legati al codice: vanno su Discord o sulle piattaforme istituzionali.
-- Materiale protetto da diritto d'autore di cui non si detengono i diritti di distribuzione.
-- Dati personali degli studenti (nomi completi, valutazioni, contatti) senza il loro consenso.
-- Credenziali, chiavi API, password o file di configurazione contenenti dati sensibili.
+- Materiali didattici non connessi al codice, da distribuire attraverso i canali indicati nella sezione *Finalità*.
+- Materiale coperto da diritto d'autore per il quale non si disponga dei diritti di distribuzione.
+- Dati personali degli studenti, in assenza di esplicito consenso.
+- Credenziali, chiavi di accesso e ogni altra informazione riservata.
 
-### Organizzazione dei progetti
+### Cartelle dei corsi
 
-- Ogni progetto va inserito nella cartella del corso di riferimento, in una propria sottocartella.
-- Nomi di file e cartelle: minuscolo, parole separate da trattino (`-`), senza spazi, accenti o caratteri speciali (es. `sintesi-granulare-max/`).
-- Ogni progetto deve avere un proprio `README.md` che indichi almeno:
-  - titolo e breve descrizione;
-  - autore/i e anno accademico;
-  - software e versioni necessari (es. Max 9, SuperCollider 3.13, Python 3.12);
-  - istruzioni per l'avvio e l'uso.
-- Dopo aver aggiunto un progetto, aggiornare l'indice nel `README.md` della cartella del corso.
+Ciascun docente crea la cartella del proprio corso all'interno della sezione di competenza (`1-triennio/`, `2-biennio/` o `3-workshop/`), includendo un `README.md` con la descrizione del corso, il nome del docente e l'indice dei progetti. In caso di omonimia con una cartella esistente, al nome della cartella va aggiunto il cognome del docente.
+
+### Progetti
+
+- Ogni progetto è collocato in una sottocartella dedicata all'interno della cartella del corso di riferimento.
+- I nomi di file e cartelle sono in caratteri minuscoli, con parole separate da trattino e privi di spazi, lettere accentate o caratteri speciali.
+- Ogni progetto è accompagnato da un `README.md` che riporti: titolo e descrizione, autore e anno accademico, software e relative versioni, istruzioni per l'esecuzione.
+- L'aggiunta di un progetto comporta l'aggiornamento dell'indice nel `README.md` del corso.
 
 ### File di grandi dimensioni
 
-- GitHub rifiuta file superiori a 100 MB e sconsiglia file oltre i 50 MB.
-- Per risorse pesanti (audio lunghi, video, dataset) preferire formati compressi, oppure ospitarle esternamente e inserire il link nel `README.md` del progetto.
+GitHub non accetta file superiori a 100 MB e ne sconsiglia l'uso oltre i 50 MB. Le risorse di dimensioni elevate (registrazioni estese, video, dataset) vanno pubblicate in formato compresso oppure ospitate su piattaforme esterne, indicandone il collegamento nel `README.md` del progetto.
 
-### Flusso di lavoro
+### Procedura
 
-1. Creare un branch dedicato a partire da `main` (es. `triennio/informatica-musicale/esercizi-fft`).
-2. Effettuare commit piccoli e con messaggi descrittivi, in italiano o in inglese (es. `Aggiunge patch di esempio per la sintesi FM`).
-3. Aprire una **Pull Request** verso `main` descrivendo brevemente il contenuto.
-4. Le modifiche ai materiali di un corso spettano al docente titolare; per interventi su cartelle altrui è buona norma richiederne la revisione.
+Il branch `main` è protetto: ogni modifica avviene tramite Pull Request.
 
-Chi preferisce non usare Git da riga di comando può caricare e modificare file direttamente dall'interfaccia web di GitHub (*Add file → Upload files*), scegliendo l'opzione *Create a new branch and start a pull request* al momento del commit.
+1. Creare un branch a partire da `main`.
+2. Effettuare commit circoscritti, accompagnati da messaggi descrittivi.
+3. Aprire una Pull Request verso `main`, illustrandone sinteticamente il contenuto, e procedere all'unione.
 
-### Segnalazioni e proposte
+Gli interventi su cartelle di competenza di altri docenti richiedono la revisione del docente interessato.
 
-Per segnalare errori, proporre nuovi progetti o discutere modifiche alla struttura del repository, aprire una **Issue**.
+È possibile operare anche dall'interfaccia web di GitHub (*Add file → Upload files*), selezionando al momento del commit l'opzione *Create a new branch and start a pull request*.
+
+### Segnalazioni
+
+Segnalazioni di errori, proposte di nuovi contenuti e richieste di modifica alla struttura del repository vanno presentate tramite Issue.
 
 ## Licenza
 
-Il contenuto del repository è distribuito con licenza [MIT](LICENSE), salvo diversa indicazione nel `README.md` del singolo progetto.
+Salvo diversa indicazione nel `README.md` del singolo progetto, i contenuti del repository sono distribuiti con licenza [MIT](LICENSE).
 
-## Contatti
+## Referente
 
-Responsabile del repository: Prof. A. Anatrini.
+Prof. A. Anatrini
